@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:full": "concurrently \"npm run server:dev\" \"npm run dev\"",
+    "server:dev": "nodemon server/index.js",
     "build": "tsc && vite build",
+    "build:server": "node server/index.js",
     "preview": "vite preview",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
